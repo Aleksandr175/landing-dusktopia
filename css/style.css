@@ -1,0 +1,79 @@
+.section-main {
+  height: 100vh;
+  background: url('../images/bg-1.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  height: 80px;
+}
+
+.logo {
+  width: 150px;
+  height: 50px;
+  background: url('../images/logo.png') 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.menu-column {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu-column .icon {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.menu-column .icon:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.menu-column .icon.discord:before {
+  width: 22px;
+  height: 17px;
+  background-image: url('../images/discord.svg');
+}
+
+.menu-column .icon.twitter:before {
+  width: 23px;
+  height: 18px;
+  background-image: url('../images/twitter.svg');
+}
+
+.menu-column .icon.m:before {
+  width: 26px;
+  height: 25px;
+  background-image: url('../images/m.svg');
+}
+
+.main-title-wrapper {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.main-title {
+  width: 100%;
+}
+
+.main-title .h1 {
+  color: white;
+  margin-bottom: 50px;
+}
