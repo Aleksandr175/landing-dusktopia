@@ -1,3 +1,12 @@
+body {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: Octo;
+  src: url('../fonts/TTOctosquaresRegular.otf');
+}
+
 .section-main {
   height: 100vh;
   background: url('../images/bg-1.jpg') 50% 50% no-repeat;
@@ -5,10 +14,37 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-main .container {
+  position: relative;
+}
+
+.section-main .bg-shine {
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  bottom: -500px;
+}
+
+.section-main .bg-shine-1 {
+  left: 0;
+
+  background: url('../images/bg-yellow.png') 0% 50% no-repeat;
+  background-size: contain;
+}
+
+.section-main .bg-shine-2 {
+  right: 0;
+
+  background: url('../images/bg-pink.png') 100% 50% no-repeat;
+  background-size: contain;
 }
 
 .header {
-  height: 80px;
+  padding-top: 35px;
 }
 
 .logo {
@@ -62,11 +98,19 @@
   background-image: url('../images/m.svg');
 }
 
+.menu-column .btn {
+  margin-left: 15px;
+}
+
 .main-title-wrapper {
   height: 100%;
   text-align: center;
   display: flex;
   align-items: center;
+}
+
+.main-title-wrapper .btn {
+  margin: 0 10px;
 }
 
 .main-title {
@@ -76,4 +120,83 @@
 .main-title .h1 {
   color: white;
   margin-bottom: 50px;
+  font-family: Octo;
+  text-transform: uppercase;
+  font-size: 60px;
+  letter-spacing: 20px;
+}
+
+
+.btn {
+  position: relative;
+  border-radius: 0;
+  border: none;
+  width: 194px;
+  height: 57px;
+  font-size: 16px;
+
+  background: url('../images/btn-big.svg') 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.btn:hover {
+  background-color: transparent;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.btn:active:focus {
+  box-shadow: none;
+}
+
+.btn-sm {
+  width: 137px;
+  background: url('../images/btn.svg') 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.btn-mark {
+  position: absolute;
+  display: inline-block;
+
+  top: 12px;
+  left: 6px;
+
+  border: 5px solid transparent;
+  border-left: 5px solid white;
+  border-top: 5px solid white;
+}
+
+.btn-mark-right {
+  transform: rotate(180deg);
+  bottom: 6px;
+  top: auto;
+  left: auto;
+  right: 6px;
+}
+
+.btn-secondary {
+  background: url('../images/btn-big-white.svg') 50% 50% no-repeat;
+  background-size: contain;
+  color: black;
+  font-size: 16px;
+}
+
+.btn-secondary:hover {
+  color: black;
+}
+
+.btn-secondary:focus,
+.btn-secondary:active {
+  color: black;
+}
+
+.btn-secondary .btn-mark {
+  border-left-color: black;
+  border-top-color: black;
 }
